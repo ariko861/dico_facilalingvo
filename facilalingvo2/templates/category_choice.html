@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block css %}
+{% endblock %}
+
+{% block content %}
+
+
+
+<div id="logdiv">
+	<span class="page_title">{{language.language_original_name}}</span>
+	<div class="right">
+	<br>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+		<input type="hidden" name="cmd" value="_s-xclick">
+		<input type="hidden" name="hosted_button_id" value="MZPZMMZMLBNZY">
+		<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+		<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+	</form>
+	<div class="right">{% include "local_change.html" %}</div><div class="clear"></div></br>
+	
+	{% if user.is_authenticated %}
+	<span class="right userinfo">{% trans "Welcome" %}, {{user.username}}. <a href="/accounts/logout">{% trans "Deconnexion" %}</a></span>
+	{% else %}
+	<span class="right userinfo"><a href='/accounts/login'>{% trans "Log in" %}</a></span>
+	{% endif %}
+	</div>
+	<div class="clear"></div>
+
+</div>
+
+{% get_current_language as LOCALE %}
+
+<form action="" method="post" enctype="multipart/form-data">
+<div id="category_check" class="list">
+	<h3>{% trans "Categories to print" %} :</h3></br>
+	<input type=checkbox id='select_all'/> {% trans "All" %}
+	</br>
+	<table>
+	<td><input type=checkbox name='numbers'>{% trans "Numbers" %}</td>
+	{% for category in category_list %}
+	{% if forloop.counter|divisibleby:"3" %}<tr>{% endif %}
+	<td><input type=checkbox name='{{category}}'>
+		{% if LOCALE == 'fr' %}
+			{{category.category_french_name}}
+		{% else %}
+			{{category.category_name}}
+		{% endif %}
+	</td>		
+	{% endfor %}
+	</table>
+</div>
+<div class="list level">
+	<h3>{% trans "Learning level" %} :</h3></br>
+	<input type=checkbox checked name='B'><span class="B">{% trans "Beginner" %}</span>
+	<input type=checkbox name='I'><span class="I">{% trans "Intermediate" %}</span>
+	<input type=checkbox name='A'><span class="A">{% trans "Advanced" %}</span>
+	<input type=checkbox name='F'><span class="F">{% trans "Fluent" %}</span>
+	<input type=checkbox name='S'><span class="S">{% trans "Slang" %}</span>
+</div>
+<div class="list orderchoice">
+	<p>{% trans "Order by" %} :</p>
+	{% if LOCALE == 'fr' %}
+		<input type=radio name="orderchoice" checked value="french">Français
+		<input type=radio name="orderchoice" value="local">{{language.language_french_name}}
+	{% else %}
+		<input type=radio name="orderchoice" checked value="english">English
+		<input type=radio name="orderchoice" value="local">{{language.language_name}}
+	{% endif %}
+</div>
+<div class="clear"></div>
+<div class="list">
+	<input type=checkbox name='local_learn'/>
+	    {% if LOCALE == 'fr' %}
+			{{language.I_want_to_learn_french}}
+			<span class="frenchnoob">
+			<input type=checkbox name='french_noob'/>
+			J'apprends l'anglais
+			</span>
+		{% else %}
+			{{language.I_want_to_learn_english}}
+		{% endif %}
+</div>
+
+<input class="submitbutton" type=submit value='submit'>
+{% csrf_token %}
+</form>
+{% endblock %}

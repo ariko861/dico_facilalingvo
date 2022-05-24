@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+{% get_current_language as LOCALE %}
+
+<div class="languagelist">
+{% for language in language_list %}
+<a href="/{{language.language_name}}/"><h2 class="{{language.language_name}}link">{{language.language_name}}</h2></a>
+{% endfor %}
+</div>
+
+{% endblock %}

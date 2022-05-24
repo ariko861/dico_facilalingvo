@@ -1,0 +1,160 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-12 12:02+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: facilalingvo2/settings.py:82 facilalingvo2/settings_prod.py:82
+#: multidico/forms.py:12
+msgid "French"
+msgstr "Français"
+
+#: facilalingvo2/settings.py:83 facilalingvo2/settings_prod.py:83
+#: multidico/forms.py:10
+msgid "English"
+msgstr "Anglais"
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:8
+msgid "Home"
+msgstr "Accueil"
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:11
+msgid "Delete multiple objects"
+msgstr "Effacer des objets multiples"
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:18
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:26
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:34
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: facilalingvo2/templates/admin/delete_selected_confirmation.html:45
+msgid "Yes, I'm sure"
+msgstr "Oui, je suis sûr"
+
+#: facilalingvo2/templates/category_choice.html:11
+msgid "All"
+msgstr "Tous"
+
+#: facilalingvo2/templates/category_choice.html:14
+#: facilalingvo2/templates/word_list.html:16
+msgid "Numbers"
+msgstr "Nombres"
+
+#: facilalingvo2/templates/category_choice.html:28 multidico/forms.py:9
+msgid "Beginner"
+msgstr "Débutant"
+
+#: facilalingvo2/templates/category_choice.html:29 multidico/forms.py:9
+msgid "Intermediate"
+msgstr "Intermédiaire"
+
+#: facilalingvo2/templates/category_choice.html:30 multidico/forms.py:9
+msgid "Advanced"
+msgstr "Avancé"
+
+#: facilalingvo2/templates/category_choice.html:33
+msgid "Order by"
+msgstr "Trier par"
+
+#: facilalingvo2/templates/word_form.html:8
+msgid "Modify word"
+msgstr "Modifier le mot"
+
+#: facilalingvo2/templates/word_list.html:22
+#: facilalingvo2/templates/word_list.html:43
+#: facilalingvo2/templates/word_list.html:66
+msgid "tens"
+msgstr "dizaines"
+
+#: facilalingvo2/templates/word_list.html:22
+#: facilalingvo2/templates/word_list.html:43
+#: facilalingvo2/templates/word_list.html:66
+msgid "hundreds"
+msgstr "centaines"
+
+#: facilalingvo2/templates/word_list.html:22
+#: facilalingvo2/templates/word_list.html:43
+#: facilalingvo2/templates/word_list.html:66
+msgid "thousands"
+msgstr "milliers"
+
+#: facilalingvo2/templates/word_list.html:106
+#: facilalingvo2/templates/word_list.html:123
+#, fuzzy
+#| msgid "Modify word"
+msgid "add word"
+msgstr "ajouter un mot"
+
+#: multidico/actions.py:50
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr ""
+
+#: multidico/actions.py:62
+#, python-format
+msgid "Cannot delete %(name)s"
+msgstr ""
+
+#: multidico/actions.py:64
+msgid "Are you sure?"
+msgstr ""
+
+#: multidico/actions.py:85
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr ""
+
+#: multidico/forms.py:8
+msgid "Category"
+msgstr "Catégorie"
+
+#: multidico/forms.py:9
+msgid "learning level"
+msgstr "niveau d'apprentissage"
+
+#: multidico/forms.py:11
+msgid "Local pronunciation of English word"
+msgstr "Prononciation de l'anglais dans la langue locale"
+
+#: multidico/forms.py:13
+msgid "Local pronunciation of French word"
+msgstr "Prononciation du français dans la langue locale"
+
+#: multidico/forms.py:14
+msgid "Local translation"
+msgstr "traduction dans la langue locale"
+
+#: multidico/forms.py:15
+msgid "Local pronunciation"
+msgstr "prononciation dans la langue locale"

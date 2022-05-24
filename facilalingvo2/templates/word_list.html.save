@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+
+
+{% for list in listoflist %}
+<div class='list','wordlist'>
+<h3>{{list.0}}</h3>
+{% for word in list %}
+{% if word.english %}
+<i>{{word.english}}</i>:<b>{{word.local}}{% if word.prononciation %}[{{word.prononciation}}]{% endif %}</b> &&
+{% endif %}
+{% endfor %}
+</div>
+{% endfor %}
+
+
+{% endblock %}

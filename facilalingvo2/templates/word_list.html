@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% block content %}
+
+{% get_current_language as LOCALE %}
+
+
+<div id="mise_en_page">
+		
+
+</div>
+
+{% if numberlist and not french_noob %}
+<div class='list wordlist'>
+<h4>{% trans "Numbers" %} :</h4>
+{% if local_learning %}
+{% if LOCALE == 'fr' %}
+<table id="tablenumber">
+<thead><tr><th></th><td></td><td>+ 10</td><td>x 10</td><td>x 100</td><td>x 1000</td></tr></thead>
+
+<tr><th>{{0}}</th><td>{{numberlist.0.french}}{% if numberlist.0.french_local_prononciation %} [{{numberlist.0.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.10.french}}{% if numberlist.10.french_local_prononciation %} [{{numberlist.10.french_local_prononciation}}]{% endif %}</td><td><i><b>{% trans "tens" %}</b></i></td><td><i><b>{% trans "hundreds" %}</b></i></td><td><i><b>{% trans "thousands" %}</b></i></td></tr>
+<tr><th>{{1}}</th><td>{{numberlist.1.french}}{% if numberlist.1.french_local_prononciation %} [{{numberlist.1.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.11.french}}{% if numberlist.11.french_local_prononciation %} [{{numberlist.11.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.10.french}}{% if numberlist.10.french_local_prononciation %} [{{numberlist.10.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.100.french}}{% if numberlist.100.french_local_prononciation %} [{{numberlist.100.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.1000.french}}{% if numberlist.1000.french_local_prononciation %} [{{numberlist.1000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{2}}</th><td>{{numberlist.2.french}}{% if numberlist.2.french_local_prononciation %} [{{numberlist.2.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.12.french}}{% if numberlist.12.french_local_prononciation %} [{{numberlist.12.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.20.french}}{% if numberlist.20.french_local_prononciation %} [{{numberlist.20.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.200.french}}{% if numberlist.200.french_local_prononciation %} [{{numberlist.200.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.2000.french}}{% if numberlist.2000.french_local_prononciation %} [{{numberlist.2000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{3}}</th><td>{{numberlist.3.french}}{% if numberlist.3.french_local_prononciation %} [{{numberlist.3.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.13.french}}{% if numberlist.13.french_local_prononciation %} [{{numberlist.13.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.30.french}}{% if numberlist.30.french_local_prononciation %} [{{numberlist.30.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.300.french}}{% if numberlist.300.french_local_prononciation %} [{{numberlist.300.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.3000.french}}{% if numberlist.3000.french_local_prononciation %} [{{numberlist.3000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{4}}</th><td>{{numberlist.4.french}}{% if numberlist.4.french_local_prononciation %} [{{numberlist.4.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.14.french}}{% if numberlist.14.french_local_prononciation %} [{{numberlist.14.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.40.french}}{% if numberlist.40.french_local_prononciation %} [{{numberlist.40.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.400.french}}{% if numberlist.400.french_local_prononciation %} [{{numberlist.400.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.4000.french}}{% if numberlist.4000.french_local_prononciation %} [{{numberlist.4000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{5}}</th><td>{{numberlist.5.french}}{% if numberlist.5.french_local_prononciation %} [{{numberlist.5.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.15.french}}{% if numberlist.15.french_local_prononciation %} [{{numberlist.15.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.50.french}}{% if numberlist.50.french_local_prononciation %} [{{numberlist.50.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.500.french}}{% if numberlist.500.french_local_prononciation %} [{{numberlist.500.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.5000.french}}{% if numberlist.5000.french_local_prononciation %} [{{numberlist.5000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{6}}</th><td>{{numberlist.6.french}}{% if numberlist.6.french_local_prononciation %} [{{numberlist.6.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.16.french}}{% if numberlist.16.french_local_prononciation %} [{{numberlist.16.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.60.french}}{% if numberlist.60.french_local_prononciation %} [{{numberlist.60.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.600.french}}{% if numberlist.600.french_local_prononciation %} [{{numberlist.600.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.6000.french}}{% if numberlist.6000.french_local_prononciation %} [{{numberlist.6000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{7}}</th><td>{{numberlist.7.french}}{% if numberlist.7.french_local_prononciation %} [{{numberlist.7.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.17.french}}{% if numberlist.17.french_local_prononciation %} [{{numberlist.17.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.70.french}}{% if numberlist.70.french_local_prononciation %} [{{numberlist.70.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.700.french}}{% if numberlist.700.french_local_prononciation %} [{{numberlist.700.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.7000.french}}{% if numberlist.7000.french_local_prononciation %} [{{numberlist.7000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{8}}</th><td>{{numberlist.8.french}}{% if numberlist.8.french_local_prononciation %} [{{numberlist.8.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.18.french}}{% if numberlist.18.french_local_prononciation %} [{{numberlist.18.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.80.french}}{% if numberlist.80.french_local_prononciation %} [{{numberlist.80.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.800.french}}{% if numberlist.800.french_local_prononciation %} [{{numberlist.800.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.8000.french}}{% if numberlist.8000.french_local_prononciation %} [{{numberlist.8000.french_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{9}}</th><td>{{numberlist.9.french}}{% if numberlist.9.french_local_prononciation %} [{{numberlist.9.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.19.french}}{% if numberlist.19.french_local_prononciation %} [{{numberlist.19.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.90.french}}{% if numberlist.90.french_local_prononciation %} [{{numberlist.90.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.900.french}}{% if numberlist.900.french_local_prononciation %} [{{numberlist.900.french_local_prononciation}}]{% endif %}</td><td>{{numberlist.9000.french}}{% if numberlist.9000.french_local_prononciation %} [{{numberlist.9000.french_local_prononciation}}]{% endif %}</td></tr>
+</table>
+
+<div id="bignumbers">
+{% if numberlist.1000000 %}<b>{{numberlist.1000000.digit}}<i> ({{numberlist.1000000.local}})</i></b> : {{numberlist.1000000.french}}{% if numberlist.1000000.french_local_prononciation %} [{{numberlist.1000000.french_local_prononciation}}]{% endif %}{% endif %}</br>
+{% if numberlist.1000000000 %}<b>{{numberlist.1000000000.digit}}<i> ({{numberlist.1000000000.local}})</i></b> : {{numberlist.1000000000.french}}{% if numberlist.1000000000.french_local_prononciation %} [{{numberlist.1000000000.french_local_prononciation}}]{% endif %}{% endif %}</br>
+
+</div>
+{% else %}
+<table id="tablenumber">
+<thead><tr><th></th><td></td><td>+ 10</td><td>x 10</td><td>x 100</td><td>x 1000</td></tr></thead>
+
+<tr><th>{{0}}</th><td>{{numberlist.0.english}}{% if numberlist.0.english_local_prononciation %} [{{numberlist.0.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.10.english}}{% if numberlist.10.english_local_prononciation %} [{{numberlist.10.english_local_prononciation}}]{% endif %}</td><td><i><b>{% trans "tens" %}</b></i></td><td><i><b>{% trans "hundreds" %}</b></i></td><td><i><b>{% trans "thousands" %}</b></i></td></tr>
+<tr><th>{{1}}</th><td>{{numberlist.1.english}}{% if numberlist.1.english_local_prononciation %} [{{numberlist.1.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.11.english}}{% if numberlist.11.english_local_prononciation %} [{{numberlist.11.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.10.english}}{% if numberlist.10.english_local_prononciation %} [{{numberlist.10.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.100.english}}{% if numberlist.100.english_local_prononciation %} [{{numberlist.100.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.1000.english}}{% if numberlist.1000.english_local_prononciation %} [{{numberlist.1000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{2}}</th><td>{{numberlist.2.english}}{% if numberlist.2.english_local_prononciation %} [{{numberlist.2.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.12.english}}{% if numberlist.12.english_local_prononciation %} [{{numberlist.12.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.20.english}}{% if numberlist.20.english_local_prononciation %} [{{numberlist.20.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.200.english}}{% if numberlist.200.english_local_prononciation %} [{{numberlist.200.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.2000.english}}{% if numberlist.2000.english_local_prononciation %} [{{numberlist.2000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{3}}</th><td>{{numberlist.3.english}}{% if numberlist.3.english_local_prononciation %} [{{numberlist.3.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.13.english}}{% if numberlist.13.english_local_prononciation %} [{{numberlist.13.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.30.english}}{% if numberlist.30.english_local_prononciation %} [{{numberlist.30.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.300.english}}{% if numberlist.300.english_local_prononciation %} [{{numberlist.300.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.3000.english}}{% if numberlist.3000.english_local_prononciation %} [{{numberlist.3000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{4}}</th><td>{{numberlist.4.english}}{% if numberlist.4.english_local_prononciation %} [{{numberlist.4.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.14.english}}{% if numberlist.14.english_local_prononciation %} [{{numberlist.14.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.40.english}}{% if numberlist.40.english_local_prononciation %} [{{numberlist.40.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.400.english}}{% if numberlist.400.english_local_prononciation %} [{{numberlist.400.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.4000.english}}{% if numberlist.4000.english_local_prononciation %} [{{numberlist.4000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{5}}</th><td>{{numberlist.5.english}}{% if numberlist.5.english_local_prononciation %} [{{numberlist.5.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.15.english}}{% if numberlist.15.english_local_prononciation %} [{{numberlist.15.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.50.english}}{% if numberlist.50.english_local_prononciation %} [{{numberlist.50.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.500.english}}{% if numberlist.500.english_local_prononciation %} [{{numberlist.500.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.5000.english}}{% if numberlist.5000.english_local_prononciation %} [{{numberlist.5000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{6}}</th><td>{{numberlist.6.english}}{% if numberlist.6.english_local_prononciation %} [{{numberlist.6.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.16.english}}{% if numberlist.16.english_local_prononciation %} [{{numberlist.16.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.60.english}}{% if numberlist.60.english_local_prononciation %} [{{numberlist.60.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.600.english}}{% if numberlist.600.english_local_prononciation %} [{{numberlist.600.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.6000.english}}{% if numberlist.6000.english_local_prononciation %} [{{numberlist.6000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{7}}</th><td>{{numberlist.7.english}}{% if numberlist.7.english_local_prononciation %} [{{numberlist.7.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.17.english}}{% if numberlist.17.english_local_prononciation %} [{{numberlist.17.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.70.english}}{% if numberlist.70.english_local_prononciation %} [{{numberlist.70.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.700.english}}{% if numberlist.700.english_local_prononciation %} [{{numberlist.700.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.7000.english}}{% if numberlist.7000.english_local_prononciation %} [{{numberlist.7000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{8}}</th><td>{{numberlist.8.english}}{% if numberlist.8.english_local_prononciation %} [{{numberlist.8.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.18.english}}{% if numberlist.18.english_local_prononciation %} [{{numberlist.18.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.80.english}}{% if numberlist.80.english_local_prononciation %} [{{numberlist.80.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.800.english}}{% if numberlist.800.english_local_prononciation %} [{{numberlist.800.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.8000.english}}{% if numberlist.8000.english_local_prononciation %} [{{numberlist.8000.english_local_prononciation}}]{% endif %}</td></tr>
+<tr><th>{{9}}</th><td>{{numberlist.9.english}}{% if numberlist.9.english_local_prononciation %} [{{numberlist.9.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.19.english}}{% if numberlist.19.english_local_prononciation %} [{{numberlist.19.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.90.english}}{% if numberlist.90.english_local_prononciation %} [{{numberlist.90.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.900.english}}{% if numberlist.900.english_local_prononciation %} [{{numberlist.900.english_local_prononciation}}]{% endif %}</td><td>{{numberlist.9000.english}}{% if numberlist.9000.english_local_prononciation %} [{{numberlist.9000.english_local_prononciation}}]{% endif %}</td></tr>
+</table>
+
+<div id="bignumbers">
+{% if numberlist.1000000 %}<b>{{numberlist.1000000.digit}}<i> ({{numberlist.1000000.local}})</i></b> : {{numberlist.1000000.english}}{% if numberlist.1000000.english_local_prononciation %} [{{numberlist.1000000.english_local_prononciation}}]{% endif %}{% endif %}</br>
+{% if numberlist.1000000000 %}<b>{{numberlist.1000000000.digit}}<i> ({{numberlist.1000000000.local}})</i></b> : {{numberlist.1000000000.english}}{% if numberlist.1000000000.english_local_prononciation %} [{{numberlist.1000000000.english_local_prononciation}}]{% endif %}{% endif %}</br>
+
+</div>
+{% endif %}
+{% else %}
+
+<table id="tablenumber">
+<thead><tr><th></th><td></td><td>+ 10</td><td>x 10</td><td>x 100</td><td>x 1000</td></tr></thead>
+
+<tr><th>{{0}}</th><td>{{numberlist.0.local}}{% if numberlist.0.prononciation %} [{{numberlist.0.prononciation}}]{% endif %}</td><td>{{numberlist.10.local}}{% if numberlist.10.prononciation %} [{{numberlist.10.prononciation}}]{% endif %}</td><td><i><b>{% trans "tens" %}</b></i></td><td><i><b>{% trans "hundreds" %}</b></i></td><td><i><b>{% trans "thousands" %}</b></i></td></tr>
+<tr><th>{{1}}</th><td>{{numberlist.1.local}}{% if numberlist.1.prononciation %} [{{numberlist.1.prononciation}}]{% endif %}</td><td>{{numberlist.11.local}}{% if numberlist.11.prononciation %} [{{numberlist.11.prononciation}}]{% endif %}</td><td>{{numberlist.10.local}}{% if numberlist.10.prononciation %} [{{numberlist.10.prononciation}}]{% endif %}</td><td>{{numberlist.100.local}}{% if numberlist.100.prononciation %} [{{numberlist.100.prononciation}}]{% endif %}</td><td>{{numberlist.1000.local}}{% if numberlist.1000.prononciation %} [{{numberlist.1000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{2}}</th><td>{{numberlist.2.local}}{% if numberlist.2.prononciation %} [{{numberlist.2.prononciation}}]{% endif %}</td><td>{{numberlist.12.local}}{% if numberlist.12.prononciation %} [{{numberlist.12.prononciation}}]{% endif %}</td><td>{{numberlist.20.local}}{% if numberlist.20.prononciation %} [{{numberlist.20.prononciation}}]{% endif %}</td><td>{{numberlist.200.local}}{% if numberlist.200.prononciation %} [{{numberlist.200.prononciation}}]{% endif %}</td><td>{{numberlist.2000.local}}{% if numberlist.2000.prononciation %} [{{numberlist.2000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{3}}</th><td>{{numberlist.3.local}}{% if numberlist.3.prononciation %} [{{numberlist.3.prononciation}}]{% endif %}</td><td>{{numberlist.13.local}}{% if numberlist.13.prononciation %} [{{numberlist.13.prononciation}}]{% endif %}</td><td>{{numberlist.30.local}}{% if numberlist.30.prononciation %} [{{numberlist.30.prononciation}}]{% endif %}</td><td>{{numberlist.300.local}}{% if numberlist.300.prononciation %} [{{numberlist.300.prononciation}}]{% endif %}</td><td>{{numberlist.3000.local}}{% if numberlist.3000.prononciation %} [{{numberlist.3000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{4}}</th><td>{{numberlist.4.local}}{% if numberlist.4.prononciation %} [{{numberlist.4.prononciation}}]{% endif %}</td><td>{{numberlist.14.local}}{% if numberlist.14.prononciation %} [{{numberlist.14.prononciation}}]{% endif %}</td><td>{{numberlist.40.local}}{% if numberlist.40.prononciation %} [{{numberlist.40.prononciation}}]{% endif %}</td><td>{{numberlist.400.local}}{% if numberlist.400.prononciation %} [{{numberlist.400.prononciation}}]{% endif %}</td><td>{{numberlist.4000.local}}{% if numberlist.4000.prononciation %} [{{numberlist.4000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{5}}</th><td>{{numberlist.5.local}}{% if numberlist.5.prononciation %} [{{numberlist.5.prononciation}}]{% endif %}</td><td>{{numberlist.15.local}}{% if numberlist.15.prononciation %} [{{numberlist.15.prononciation}}]{% endif %}</td><td>{{numberlist.50.local}}{% if numberlist.50.prononciation %} [{{numberlist.50.prononciation}}]{% endif %}</td><td>{{numberlist.500.local}}{% if numberlist.500.prononciation %} [{{numberlist.500.prononciation}}]{% endif %}</td><td>{{numberlist.5000.local}}{% if numberlist.5000.prononciation %} [{{numberlist.5000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{6}}</th><td>{{numberlist.6.local}}{% if numberlist.6.prononciation %} [{{numberlist.6.prononciation}}]{% endif %}</td><td>{{numberlist.16.local}}{% if numberlist.16.prononciation %} [{{numberlist.16.prononciation}}]{% endif %}</td><td>{{numberlist.60.local}}{% if numberlist.60.prononciation %} [{{numberlist.60.prononciation}}]{% endif %}</td><td>{{numberlist.600.local}}{% if numberlist.600.prononciation %} [{{numberlist.600.prononciation}}]{% endif %}</td><td>{{numberlist.6000.local}}{% if numberlist.6000.prononciation %} [{{numberlist.6000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{7}}</th><td>{{numberlist.7.local}}{% if numberlist.7.prononciation %} [{{numberlist.7.prononciation}}]{% endif %}</td><td>{{numberlist.17.local}}{% if numberlist.17.prononciation %} [{{numberlist.17.prononciation}}]{% endif %}</td><td>{{numberlist.70.local}}{% if numberlist.70.prononciation %} [{{numberlist.70.prononciation}}]{% endif %}</td><td>{{numberlist.700.local}}{% if numberlist.700.prononciation %} [{{numberlist.700.prononciation}}]{% endif %}</td><td>{{numberlist.7000.local}}{% if numberlist.7000.prononciation %} [{{numberlist.7000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{8}}</th><td>{{numberlist.8.local}}{% if numberlist.8.prononciation %} [{{numberlist.8.prononciation}}]{% endif %}</td><td>{{numberlist.18.local}}{% if numberlist.18.prononciation %} [{{numberlist.18.prononciation}}]{% endif %}</td><td>{{numberlist.80.local}}{% if numberlist.80.prononciation %} [{{numberlist.80.prononciation}}]{% endif %}</td><td>{{numberlist.800.local}}{% if numberlist.800.prononciation %} [{{numberlist.800.prononciation}}]{% endif %}</td><td>{{numberlist.8000.local}}{% if numberlist.8000.prononciation %} [{{numberlist.8000.prononciation}}]{% endif %}</td></tr>
+<tr><th>{{9}}</th><td>{{numberlist.9.local}}{% if numberlist.9.prononciation %} [{{numberlist.9.prononciation}}]{% endif %}</td><td>{{numberlist.19.local}}{% if numberlist.19.prononciation %} [{{numberlist.19.prononciation}}]{% endif %}</td><td>{{numberlist.90.local}}{% if numberlist.90.prononciation %} [{{numberlist.90.prononciation}}]{% endif %}</td><td>{{numberlist.900.local}}{% if numberlist.900.prononciation %} [{{numberlist.900.prononciation}}]{% endif %}</td><td>{{numberlist.9000.local}}{% if numberlist.9000.prononciation %} [{{numberlist.9000.prononciation}}]{% endif %}</td></tr>
+</table>
+
+<div id="bignumbers">
+{% if numberlist.1000000 %}<b>{{numberlist.1000000.digit}}<i> ({% if LOCALE == 'fr' %}{{numberlist.1000000.english}}{% else %}{{numberlist.1000000.english}}{% endif %})</i></b> : {{numberlist.1000000.local}}{% if numberlist.1000000.prononciation %} [{{numberlist.1000000.prononciation}}]{% endif %}{% endif %}</br>
+{% if numberlist.1000000000 %}<b>{{numberlist.1000000000.digit}}<i> ({% if LOCALE == 'fr' %}{{numberlist.1000000000.french}}{% else %}{{numberlist.1000000000.english}}{% endif %})</i></b> : {{numberlist.1000000000.local}}{% if numberlist.1000000000.prononciation %} [{{numberlist.1000000000.prononciation}}]{% endif %}{% endif %}</br>
+
+</div>
+{% endif %}
+<div class="clear"></div>
+</div>
+
+{% endif %}
+
+{% for list in listoflist %}
+{% if list.1 %}
+{% if LOCALE == 'fr' %}
+	<div class='list wordlist'>
+	<h4>{{list.0.category_french_name}} :</h4>
+	<p>{% for word in list %}
+		{% if word.subcategory_french_name %}
+			</br><span class='subtitle'>{{word.subcategory_french_name}} :</span>
+		{% endif %}
+		{% if word.french %}
+			{% if local_learning %}
+				{% if word.local %}<span class="{{word.learning_progress}}">{<i>{% if user.is_authenticated %}<a href="/change{% if word.word_origin %}again{% endif %}/{{word.id}}">{% endif %}{{word.local}}</a></i> : <b>{{word.french}}<i> [{{word.french_local_prononciation}}]</i></b>}</span> &nbsp;{% endif %}
+			{% elif french_noob %}
+				{% if word.english %}<span class="{{word.learning_progress}}">{<i>{% if user.is_authenticated %}<a href="/change{% if word.word_origin %}again{% endif %}/{{word.id}}">{% endif %}{{word.french}}</a></i> : <b>{{word.english}}</b>}</span> &nbsp;{% endif %}
+			{% else %}	
+				{% if word.local %}<span class="{{word.learning_progress}}">{<i>{% if user.is_authenticated %}<a href="/change{% if word.word_origin %}again{% endif %}/{{word.id}}">{% endif %}{{word.french}}</a></i> : <b>{{word.local}}{% if word.prononciation %} <i>[{{word.prononciation}}]</i>{% endif %}</b>}</span> &nbsp;{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	{% if user.is_authenticated %}<a href="{{list.0}}/addword"><button>{% trans "add word" %}</button></a>{% endif %}</p>
+	</div>
+{% else %}
+	<div class='list wordlist'>
+	<h4>{{list.0}} :</h4>
+	<p>{% for word in list %}
+		{% if word.subcategory_name %}
+			</br><span class='subtitle'>{{word.subcategory_name}} :</span>
+		{% endif %}
+		{% if word.english %}
+			{% if local_learning %}
+				{% if word.local %}<span class="{{word.learning_progress}}">{<i>{% if user.is_authenticated %}<a href="/change{% if word.word_origin %}again{% endif %}/{{word.id}}">{% endif %}{{word.local}}</a></i> : <b>{{word.english}} [{{word.english_local_prononciation}}]</b>}</span> &nbsp;{% endif %}
+			{% else %}
+				{% if word.local %}<span class="{{word.learning_progress}}">{<i>{% if user.is_authenticated %}<a href="/change{% if word.word_origin %}again{% endif %}/{{word.id}}">{% endif %}{{word.english}}</a></i> : <b>{{word.local}}{% if word.prononciation %} [{{word.prononciation}}]{% endif %}</b>}</span> &nbsp;{% endif %}
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+	{% if user.is_authenticated %}<a href="{{list.0}}/addword"><button>{% trans "add word" %}</button></a>{% endif %}</p>
+	</div>
+
+{% endif %}
+
+{% endif %}
+{% endfor %}
+
+
+{% endblock %}
